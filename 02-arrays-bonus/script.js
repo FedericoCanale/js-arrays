@@ -13,18 +13,21 @@ const teachers = [
 const reversedTeachers = [];
 for (let i = teachers.length - 1; i >= 0; i--) {
   reversedTeachers.push(teachers[i]);
+  //const thisTeacher = teachers[i]
+  //console.log(thisTeacher)
+  //reversedTeachers.push(thisTeacher)
 }
 
 console.log(reversedTeachers)
 
-
+// const reversedTeachers = teachers.reverse();
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
 const longNames = [];
 for (let i = 0; i < teachers.length; i++) {
-  const teacherName = teachers[i]; 
-  if (teacherName.length >= 5) {   
-    longNames.push(teacherName);  
+  const teacherName = teachers[i];
+  if (teacherName.length >= 5) {
+    longNames.push(teacherName);
   }
 }
 
@@ -35,15 +38,37 @@ const index = teachers.indexOf('Ed');
 if (index !== -1) {
   teachers.splice(index, 1);
 }
+
+//teachers.splice(teachers.indexOf('Ed), 1)
+// console.log(teachers);
 console.log(teachers);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
 const isFabioPresent = teachers.includes('Fabio');
 console.log(isFabioPresent);
-
+/*
+let isFabioPresent = null
+for (let i 0 0; i < teacher.length; i++) {
+  const thisTeacher = teachers[i];
+  if(thisTeacher === 'Fabio'){
+    console.log(`I Found Fabio`);
+    isFabioPresent = true
+    break;
+  }
+}
+console-log(isFabioPresent);
+*/
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
 const teachersString = teachers.toString();
 console.log(teachersString);
 
+/* let teachersString = '';
+for (let i = 0; i < teachers.length; i++) {
+  const thisTeacher = teachers[i];
+  //console.log(thisTeacher)
+  if(i < teachers.leght -1) {
+    teachersString += ','}
+  }
+  */
